@@ -25,7 +25,7 @@ module.exports = {
     },
     kovan: {
       provider: () => {
-        return new HDWalletProvider(mnemonic, url)
+        return new HDWalletProvider({ mnemonic: mnemonic, providerOrUrl:url, chainId:42})
       },
       network_id: '42',
       skipDryRun: true
